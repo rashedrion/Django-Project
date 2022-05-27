@@ -1,0 +1,32 @@
+{% extends "master.html"%}
+{%block content%}
+
+
+<!-- Forms Star -->
+<div class="container" style="max-width: 70%;">
+    <div class="row mt-5">
+        <h3> Product Order </h3>
+    </div>
+    <div class="row">
+
+
+        <form action="#" method="post">
+            {%csrf_token%}
+            <label for="exampleInputEmail1" class="form-label">{{form.customer_id.label}}</label>
+            <div class="form-control">{{form.customer_id}}</div>
+            <label for="exampleInputEmail1" class="form-label">{{form.product.label}}</label>
+            <div class="form-control">{{form.product_id}}</div>
+            <label for="exampleInputEmail1" class="form-label">{{form.quantity.label}}</label>
+            <div class="form-control">{{form.quantity}}</div>
+            <label for="exampleInputEmail1" class="form-label">{{form.delivery.label}}</label>
+            <div class="form-control">{{form.delivery}}</div>
+
+            <!-- {{form}} -->
+
+            <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+</div>
+
+{%endblock%}
